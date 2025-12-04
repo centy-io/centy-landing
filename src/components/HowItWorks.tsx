@@ -11,14 +11,14 @@ const steps = [
     title: "Create Issues",
     description:
       "Create new issues using the CLI or manually add Markdown files. Each issue gets a unique ID.",
-    code: "npx centy create 'Fix login bug'",
+    code: "npx centy create issue --title 'Fix login bug'",
   },
   {
     step: "03",
     title: "Track Progress",
     description:
       "Update issue status, add comments, and track progress. All changes are version controlled.",
-    code: "npx centy status b4723689",
+    code: "npx centy get issue 1",
   },
   {
     step: "04",
