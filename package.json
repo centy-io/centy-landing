@@ -14,6 +14,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
+    "@centy-io/assets": "^0.0.1",
     "next": "^16.0.7",
     "react": "^19.2.1",
     "react-dom": "^19.2.1"

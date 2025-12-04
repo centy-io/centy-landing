@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logoColor from "@centy-io/assets/logos/logo-color.svg";
 
 export function Header() {
   return (
@@ -6,6 +8,13 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-2">
+            <Image
+              src={logoColor}
+              alt="Centy Logo"
+              width={32}
+              height={32}
+              priority
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] bg-clip-text text-transparent">
               Centy
             </span>
