@@ -1,31 +1,31 @@
 const steps = [
   {
     step: "01",
-    title: "Initialize Centy",
+    title: "Install Centy CLI",
     description:
-      "Add Centy to your project with a simple initialization command. It creates a .centy folder in your repository.",
-    code: "npx centy init",
+      "Install the Centy CLI globally on your system. Requires Node.js 20 or higher.",
+    code: "npm install -g centy",
   },
   {
     step: "02",
-    title: "Create Issues",
+    title: "Install & Start the Daemon",
     description:
-      "Create new issues using the CLI or manually add Markdown files. Each issue gets a unique ID.",
-    code: "npx centy create issue --title 'Fix login bug'",
+      "Download and start the Centy daemon. This background service handles all operations.",
+    code: "centy install daemon && centy start",
   },
   {
     step: "03",
-    title: "Track Progress",
+    title: "Initialize Your Project",
     description:
-      "Update issue status, add comments, and track progress. All changes are version controlled.",
-    code: "npx centy get issue 1",
+      "Navigate to your project and initialize Centy. Creates a .centy folder to store issues and docs.",
+    code: "cd your-project && centy init",
   },
   {
     step: "04",
-    title: "Collaborate",
+    title: "Start Tracking Issues",
     description:
-      "Share issues through git, integrate with AI assistants, or build custom tooling around the simple format.",
-    code: "git add .centy && git commit -m 'Close issue'",
+      "Create and manage issues directly from your terminal. All data is stored in git-friendly Markdown files.",
+    code: "centy create issue --title 'My first issue'",
   },
 ];
 
@@ -37,9 +37,9 @@ export function HowItWorks() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get Started</h2>
           <p className="text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
-            Get started with Centy in minutes. No account required.
+            Set up Centy on your computer in under 5 minutes. No account required, works offline.
           </p>
         </div>
 
