@@ -33,6 +33,14 @@ export function Hero() {
             Get Started
           </Link>
           <Link
+            href="https://app.centy.io/?demo=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 text-base font-medium border border-[var(--secondary)] rounded-lg hover:bg-[var(--secondary)] transition-colors"
+          >
+            Try Demo
+          </Link>
+          <Link
             href="https://github.com/centy-io"
             target="_blank"
             rel="noopener noreferrer"
