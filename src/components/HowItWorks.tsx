@@ -4,7 +4,7 @@ const steps = [
     title: "Install Centy CLI",
     description:
       "Install the Centy CLI globally on your system. Requires Node.js 20 or higher.",
-    code: "npm install -g centy",
+    code: "pnpm add -g centy",
   },
   {
     step: "02",
