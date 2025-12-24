@@ -23,9 +23,16 @@ async function generate() {
     console.log(`Generated ${filename}`);
   }
 
-  // Generate ICO from 32x32 PNG
-  const png32 = await sharp(svg).resize(32, 32).png().toBuffer();
-  const ico = await pngToIco(png32);
+  // Generate ICO with 16x16 and 32x32 sizes (optimized for small file size)
+  const png16 = await sharp(svg)
+    .resize(16, 16)
+    .png({ compressionLevel: 9 })
+    .toBuffer();
+  const png32 = await sharp(svg)
+    .resize(32, 32)
+    .png({ compressionLevel: 9 })
+    .toBuffer();
+  const ico = await pngToIco([png16, png32]);
   writeFileSync(path.join(OUTPUT_DIR, "favicon.ico"), ico);
 
   console.log("Generated favicon.ico");
