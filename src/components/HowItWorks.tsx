@@ -1,17 +1,17 @@
 const steps = [
   {
     step: "01",
-    title: "Install Centy CLI",
+    title: "Install Centy",
     description:
-      "Install the Centy CLI globally on your system. Requires Node.js 20 or higher.",
-    code: "pnpm add -g centy",
+      "Install the Centy daemon with a single command. No Node.js required.",
+    code: "curl -fsSL https://github.com/centy-io/installer/releases/latest/download/install.sh | sh",
   },
   {
     step: "02",
-    title: "Install & Start the Daemon",
+    title: "Install the CLI & Start",
     description:
-      "Download and start the Centy daemon. This background service handles all operations.",
-    code: "centy install daemon && centy start",
+      "Install the CLI and start the daemon. This background service handles all operations.",
+    code: "pnpm add -g centy && centy start",
   },
   {
     step: "03",

@@ -43,7 +43,7 @@ export function CTA() {
             Quick install:
           </p>
           <code className="text-lg text-[var(--primary)] font-mono">
-            npx centy init
+            curl -fsSL https://github.com/centy-io/installer/releases/latest/download/install.sh | sh
           </code>
         </div>
       </div>
