@@ -33,31 +33,41 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--secondary)]/50"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--secondary)] border-t-2 border-b-2 border-[var(--foreground)]"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get Started</h2>
-          <p className="text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
-            Set up Centy on your computer in under 5 minutes. No account required, works offline.
+        <div className="mb-16">
+          <p className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] mb-3">
+            — Get Started
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--foreground)]">
+            Up and Running in Minutes
+          </h2>
+          <p className="text-base text-[var(--muted)] max-w-xl mt-4 leading-relaxed">
+            No account required. Works offline. Installs in under 5 minutes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[var(--foreground)] border-2 border-[var(--foreground)]">
           {steps.map((step) => (
-            <div key={step.step} className="flex gap-6">
+            <div
+              key={step.step}
+              className="p-8 bg-[var(--secondary)] flex gap-6"
+            >
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-bold text-lg">
+                <div className="w-10 h-10 border-2 border-[var(--foreground)] flex items-center justify-center font-mono font-bold text-sm text-[var(--foreground)]">
                   {step.step}
                 </div>
               </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-[var(--foreground)]/70 mb-4">
+              <div className="flex-1 min-w-0">
+                <h3 className="font-mono text-sm font-bold uppercase tracking-wider text-[var(--foreground)] mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-[var(--muted)] mb-4 leading-relaxed">
                   {step.description}
                 </p>
-                <div className="bg-[var(--background)] rounded-lg p-3 border border-[var(--secondary)]">
-                  <code className="text-sm text-[var(--primary)]">
+                <div className="bg-[var(--foreground)] p-3 border-2 border-[var(--foreground)]">
+                  <code className="font-mono text-xs text-[var(--background)]/90 break-all">
                     {step.code}
                   </code>
                 </div>

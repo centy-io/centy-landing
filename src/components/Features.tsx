@@ -5,7 +5,7 @@ const features = [
       "Issues are stored as simple Markdown files. Easy to read, easy to edit, easy to version control.",
     icon: (
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -25,7 +25,7 @@ const features = [
       "Issues live alongside your code in the repository. Track changes with git history and collaborate naturally.",
     icon: (
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ const features = [
       "Designed to work seamlessly with AI assistants like Claude Code for intelligent issue resolution.",
     icon: (
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ const features = [
       "No external services or databases required. Everything runs locally within your project.",
     icon: (
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -80,12 +80,12 @@ const features = [
     ),
   },
   {
-    title: "Customizable Templates",
+    title: "Frontmatter YAML",
     description:
-      "Define your own issue templates to match your workflow and project requirements.",
+      "Attach structured data to any issue using YAML frontmatter. Define custom fields, statuses, and metadata that fit your workflow.",
     icon: (
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -94,7 +94,7 @@ const features = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+          d="M4 7h16M4 12h10M4 17h7M9 3v4M15 3v4"
         />
       </svg>
     ),
@@ -105,7 +105,7 @@ const features = [
       "Free and open source under MIT license. Contribute, customize, and make it your own.",
     icon: (
       <svg
-        className="w-6 h-6"
+        className="w-5 h-5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -123,28 +123,36 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section
+      id="features"
+      className="py-20 px-4 sm:px-6 lg:px-8 border-t-2 border-[var(--foreground)]"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <div className="mb-16">
+          <p className="font-mono text-xs uppercase tracking-widest text-[var(--muted)] mb-3">
+            — Features
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--foreground)]">
             Why Choose Centy?
           </h2>
-          <p className="text-lg text-[var(--foreground)]/70 max-w-2xl mx-auto">
+          <p className="text-base text-[var(--muted)] max-w-xl mt-4 leading-relaxed">
             A modern approach to issue tracking that puts developers first.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2px] bg-[var(--foreground)]">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="p-6 rounded-xl bg-[var(--secondary)] border border-[var(--secondary)] hover:border-[var(--primary)]/50 transition-colors"
+              className="p-6 bg-[var(--background)] group hover:bg-[var(--foreground)] transition-all duration-100 cursor-default"
             >
-              <div className="w-12 h-12 rounded-lg bg-[var(--primary)]/10 text-[var(--primary)] flex items-center justify-center mb-4">
+              <div className="w-9 h-9 border-2 border-[var(--foreground)] group-hover:border-[var(--background)] flex items-center justify-center mb-5 text-[var(--foreground)] group-hover:text-[var(--background)]">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-[var(--foreground)]/70">
+              <h3 className="font-mono text-sm font-bold uppercase tracking-wider mb-2 text-[var(--foreground)] group-hover:text-[var(--background)]">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-[var(--muted)] leading-relaxed group-hover:text-[var(--background)]/70">
                 {feature.description}
               </p>
             </div>

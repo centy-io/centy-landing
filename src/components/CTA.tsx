@@ -2,22 +2,30 @@ import Link from "next/link";
 
 export function CTA() {
   return (
-    <section id="cta" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Ready to Simplify Your Issue Tracking?
+    <section
+      id="cta"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--foreground)]"
+    >
+      <div className="max-w-4xl mx-auto">
+        <p className="font-mono text-xs uppercase tracking-widest text-[var(--background)]/50 mb-6">
+          — Ready to start
+        </p>
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--background)] mb-6 leading-tight">
+          Simplify Your
+          <br />
+          Issue Tracking.
         </h2>
-        <p className="text-lg text-[var(--foreground)]/70 mb-8">
-          Join developers who are using Centy to manage their project issues
-          right alongside their code.
+        <p className="text-base text-[var(--background)]/60 mb-10 max-w-xl leading-relaxed">
+          Join developers using Centy to manage project issues right alongside
+          their code. No account needed.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 mb-16">
           <Link
             href="https://app.centy.io"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 text-base font-medium text-white bg-[var(--primary)] rounded-lg hover:bg-[var(--primary-hover)] transition-colors"
+            className="px-8 py-3 font-mono text-sm font-bold uppercase tracking-widest bg-[var(--background)] text-[var(--foreground)] border-2 border-[var(--background)] hover:bg-transparent hover:text-[var(--background)] transition-all duration-100 text-center"
           >
             Launch App
           </Link>
@@ -25,9 +33,9 @@ export function CTA() {
             href="https://github.com/centy-io"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-medium border border-[var(--secondary)] rounded-lg hover:bg-[var(--secondary)] transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 font-mono text-sm font-bold uppercase tracking-widest border-2 border-[var(--background)]/40 text-[var(--background)]/70 hover:border-[var(--background)] hover:text-[var(--background)] transition-all duration-100"
           >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -38,13 +46,17 @@ export function CTA() {
           </Link>
         </div>
 
-        <div className="mt-12 p-6 rounded-xl bg-[var(--secondary)] border border-[var(--secondary)]">
-          <p className="text-sm text-[var(--foreground)]/70 mb-3">
-            Quick install:
+        <div className="border-t border-[var(--background)]/20 pt-10">
+          <p className="font-mono text-xs uppercase tracking-widest text-[var(--background)]/40 mb-4">
+            Quick install
           </p>
-          <code className="text-lg text-[var(--primary)] font-mono">
-            curl -fsSL https://github.com/centy-io/installer/releases/latest/download/install.sh | sh
-          </code>
+          <div className="border-2 border-[var(--background)]/20 p-4 hover:border-[var(--background)]/50 transition-all duration-100">
+            <code className="font-mono text-sm text-[var(--background)]/80 break-all">
+              curl -fsSL
+              https://github.com/centy-io/installer/releases/latest/download/install.sh
+              | sh
+            </code>
+          </div>
         </div>
       </div>
     </section>
