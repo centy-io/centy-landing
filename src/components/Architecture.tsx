@@ -1,7 +1,7 @@
 const clients = [
-  { label: "CLI", sublabel: "centy-cli" },
-  { label: "Web UI", sublabel: "Browser" },
-  { label: "MCP Server", sublabel: "Go · AI agents" },
+  { label: "CLI", sublabel: "pnpm dlx centy" },
+  { label: "Web UI", sublabel: "app.centy.io" },
+  { label: "MCP Server", sublabel: "npx -y centy-mcp" },
   { label: "External Tools", sublabel: "Any gRPC client" },
 ];
 
@@ -32,26 +32,6 @@ export function Architecture() {
         </div>
 
         <div className="font-mono flex flex-col items-stretch gap-0">
-          {/* AI Agent row */}
-          <div className="flex items-center gap-0 mb-[-2px] self-start">
-            <div className="border-2 border-[var(--foreground)] px-4 py-2.5 flex items-center gap-3">
-              <span className="text-xs uppercase tracking-widest text-[var(--muted)]">
-                AI Agent
-              </span>
-              <span className="text-sm font-bold text-[var(--foreground)]">
-                Claude
-              </span>
-            </div>
-            <div className="flex items-center">
-              <div className="h-px w-6 bg-[var(--foreground)]" />
-              <span className="text-xs text-[var(--muted)] px-2 uppercase tracking-wider">
-                MCP Protocol
-              </span>
-              <div className="h-px w-6 bg-[var(--foreground)]" />
-              <span className="text-[var(--foreground)] font-bold">→</span>
-            </div>
-          </div>
-
           {/* Clients box */}
           <div className="border-2 border-[var(--foreground)] p-5">
             <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-4">
@@ -76,11 +56,7 @@ export function Architecture() {
 
           {/* Connector */}
           <div className="flex flex-col items-center py-3 self-center">
-            <div className="w-px h-5 bg-[var(--foreground)]" />
-            <span className="text-xs text-[var(--muted)] py-1.5 uppercase tracking-wider">
-              gRPC · Connect-RPC · HTTP/2
-            </span>
-            <div className="w-px h-5 bg-[var(--foreground)]" />
+            <div className="w-px h-20 bg-[var(--foreground)]" />
             <span className="text-[var(--foreground)] text-xl leading-none">
               ↓
             </span>
@@ -88,13 +64,12 @@ export function Architecture() {
 
           {/* Daemon box */}
           <div className="border-2 border-[var(--foreground)] p-5">
-            <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-5">
-              centy-daemon ·{" "}
-              <span className="text-[var(--foreground)]">Rust · tonic</span>
-            </p>
             <div className="flex flex-col items-center gap-0 max-w-sm mx-auto">
               {daemonLayers.map((layer, i) => (
-                <div key={layer.label} className="w-full flex flex-col items-center">
+                <div
+                  key={layer.label}
+                  className="w-full flex flex-col items-center"
+                >
                   <div
                     className={`w-full border-2 border-[var(--foreground)] p-3.5 text-center ${
                       layer.inverted
