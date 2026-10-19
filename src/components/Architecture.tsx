@@ -1,7 +1,7 @@
 const clients = [
   { label: "CLI", sublabel: "pnpm dlx centy" },
   { label: "Web UI", sublabel: "app.centy.io" },
-  { label: "MCP Server", sublabel: "npx -y centy-mcp" },
+  { label: "MCP Server", sublabel: "http://127.0.0.1:50052/mcp" },
   { label: "External Tools", sublabel: "Any gRPC client" },
 ];
 
