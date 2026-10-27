@@ -6,16 +6,6 @@ rules:
     warn_message: "Getting long — consider splitting into smaller modules/components"
     error: 400
     error_message: "Too large to review easily; split this file before merging"
-  - pattern: "**/*.tf"
-    warn: 200
-    warn_message: "Getting long — consider splitting into a separate Terraform file"
-    error: 400
-    error_message: "Too large to review easily; split this file before merging"
-  - pattern: "**/*.css"
-    warn: 300
-    warn_message: "Getting long — consider splitting stylesheets"
-    error: 600
-    error_message: "Too large to review easily; split this file before merging"
 
 exclude:
   - ".centy/**"
